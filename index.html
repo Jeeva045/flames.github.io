@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes move {
+        from{
+            width:0%;
+           
+        }
+        to{
+            width:40%;
+          
+        }
+        
+    }
+    @keyframes opacity {
+        from{
+            opacity:0%;
+           
+        }
+        to{
+            opacity:100%;
+          
+        }
+        
+    }
+    @keyframes rotate{
+        0%{
+            transform: rotateY( 0deg ) ;
+           
+           
+        }
+        50%{
+            transform: rotateY( 90deg ) ;
+            
+        }
+        100%{
+            transform: rotateY( 0deg ) ;
+        }
+        }
+    body{
+        width: 100%;
+        height: 100%;
+        background-image: url(purple2.jpg);
+        background-repeat: no-repeat;
+    background-attachment: fixed;
+        background-size: cover;
+    }
+    h1{
+        text-align: center;
+        
+    margin-left: auto;
+        margin-right: auto;
+
+        font-size: 4em;
+        font-family: 'Montserrat', sans-serif;
+        color: #845EC2;
+        animation: opacity 1s;
+    }
+    .container{
+        height: 400px;
+        width: 430px;
+        background-color: #845EC2;
+        position: absolute;
+        top:24.7%;
+        left:26%;
+        /* display: flex;
+        margin-top: 200px;
+        margin-left: 100px; */
+        border-radius: 10px; 
+        /* margin-top: 100px; */
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s, box-shadow 0.5s;
+        animation: opacity 1s;
+        animation-delay: 1.1s;
+        opacity: 0%;
+        animation-fill-mode: forwards;
+    }
+    .container:hover,.answer:hover{
+        transform: scale(1.05);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    }
+    .answer{
+        font-family: 'Montserrat', sans-serif;
+        height: 400px;
+        width: 350px;
+        background-color: #845EC2;
+        position: absolute;
+        top:24.7%;
+        left:55%;
+        
+        border-radius: 10px;
+        color: #D5CABD;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s, box-shadow 0.5s;
+        
+       opacity: 0%;
+        animation: opacity 1s;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+        
+        
+    }
+    .inn{
+        display: block;
+        position: absolute;
+        padding: 30px;
+        left:10%;
+        top: 22%;
+    }
+    input{
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 50px;
+        width: 150%;
+        padding: 8px;
+        border: none;
+        border-radius: 10px;
+        color:#9B89B3;
+
+
+    }
+    input:focus{
+        outline: none;
+    }
+    button{
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        left: 52%;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 100px;
+        border: none;
+        background-color: #FEFEDF;
+        color:#9B89B3;
+        width:0%;
+        transition: width 0.5s;
+        
+    }
+    .end{
+        width:100%;
+        height:190px;
+        position: absolute;
+        bottom: -60px;
+        background-color: #845EC2;
+
+        border-radius: 3px;
+        opacity: 0%;
+        
+        animation: opacity 1.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+#hh,#ra{
+     text-align: center;
+    margin-left: auto;
+        margin-right: auto;font-family: 'Montserrat', sans-serif;
+}
+    
+h2{
+  --c: #FEFEDF; /* the color  */
+  --h: 1.8em;   /* the height */
+  
+  line-height: var(--h);
+  background: 
+    linear-gradient(var(--c) 0 0) no-repeat 
+    calc(200% - var(--_p,0%)) 100%/200% var(--_p,.08em);
+  color: #0000;
+  overflow: hidden;
+  text-shadow: 
+    0 calc(-1*var(--_t,0em)) var(--c), 
+    0 calc(var(--h) - var(--_t,0em)) #845EC2;
+  transition: .3s var(--_s,0s), background-position .3s calc(.3s - var(--_s,0s));
+}
+h2:hover {
+  --_t: var(--h);
+  --_p: 100%;
+  --_s: .3s
+}
+button:hover,
+button:focus {
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@media only screen and (max-width:1500px) {
+    /* #hh{
+        margin-left: auto;
+        margin-right: auto;
+   
+       
+    } */
+         body {
+            margin: 0;
+            padding: 0;
+         }
+         .answer {
+            width: 20%;
+    
+         }
+         .container{
+            width: 25%;
+         }
+         .inn{
+            position:absolute;
+            width:40%;
+            padding: 10px;
+         }
+         button{
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        left: 52%;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 100px;
+        border: none;
+        background-color: #FEFEDF;
+        color:#9B89B3;
+        width:0%;
+        transition: width 0.5s;
+        
+    }
+         @keyframes move {
+        from{
+            width:0%;
+           
+        }
+        to{
+            width:60%;
+          
+        }
+        
+    }
+    button:hover,
+button:focus {
+  animation-name: move;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+      }
+      @media screen and (max-width:1100px){
+        body{
+    position: fixed;
+    background-attachment: fixed;
+  }
+    
+    #pp{
+        display: none;
+    }
+    .answer{
+        font-family: 'Montserrat', sans-serif;
+        height: 80px;
+        width: 300px;
+        background-color: #845EC2;
+        position: fixed;
+        top:76%;
+        left:17%;
+    
+        border-radius: 10px;
+        color: #D5CABD;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s, box-shadow 0.5s;
+        
+       opacity: 0%;
+        animation: opacity 1s;
+        animation-delay: 1.2s;
+        animation-fill-mode: forwards;
+        text-align: center;
+        
+        
+    }
+
+    .container{
+        height: 300px;
+        width: 300px;
+        background-color: #845EC2;
+        position: absolute;
+        top:20%;
+        left:15%;
+        border-radius: 10px;
+        margin-top: 85px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s, box-shadow 0.5s;
+        animation: opacity 1s;
+        animation-delay: 1.1s;
+        opacity: 0%;
+        animation-fill-mode: forwards;
+        text-align: center;
+    }
+    .end{
+        display:none;
+    }
+    input{
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 25px;
+        width:100%;
+        height:25px;
+        padding: 1px;
+        border: none;
+        border-radius: 10px;
+        color:#9B89B3;
+
+
+    }
+    .inn{
+        display: block;
+        position: absolute;
+        padding: 0px;
+        left:25%;
+        top: 30%;
+    }
+    button{
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        left: 20%;
+        font-size: 1em;
+        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 100px;
+        border: none;
+        background-color: #FEFEDF;
+        color:#9B89B3;
+        width:0%;
+        transition: width 0.5s;
+        
+    }
+        @keyframes move {
+        from{
+            width:0%;
+           
+        }
+        to{
+            width:60%;
+          
+        }
+        
+    }
+
+      }
+</style>
+<body>
+    <h1>Flames Generator</h1>
+    <div class="container">
+        <h2 id="hh">Type your name</h2>
+        <div class="inn">
+        <input type="text" id="n1"><br>
+        <input type="text" id="n2"><br>
+        <button onclick="run()">submit</button></div>
+    </div>
+    <div class="answer" id="ans">
+        <h2 id="ra">Your relationship</h2>
+        <br>
+        <p id="pp" style="padding: 23px; color: #FFF6FF; padding-top: 10px; font-size: .9em; ">Enter your name and your crush name to find about your relationship with her/him</p>
+    </div>
+    <div class="end"></div>
+    <script>
+        let bar=document.getElementById("ans")
+        let c=document.getElementById("ra")
+        let v=document.getElementById("ans:hover")
+        
+        function run()
+        {
+            let bar=document.getElementById("ans")
+        let c=document.getElementById("ra")
+            bar.style.opacity="100%"
+
+            bar.style.animationName="rotate";
+            bar.style.animationDuration="0.5s"
+            bar.style.animationDelay="0s"
+            // b.style.animationFillMode="backwards"
+            c.innerHTML="Friendship"
+  let a=String(document.getElementById("n1").value).toLowerCase()
+  let b=String(document.getElementById("n2").value).toLowerCase()
+let res=document.getElementById("pp")
+  let arr=["FRIENDSHIP","LOVE","AFFECTION","MARRIAGE","ENEMY","SIBLING"];
+  let maxa=[];
+  let mina=[];
+  let t=0;
+  let d=((a.split("")).sort())
+  let e=((b.split("")).sort())
+  let min=(a.length<=b.length)?a.length:b.length;
+  let max=(a.length>=b.length)?a.length:b.length;
+  if(e.length>=d.length)
+  {
+  maxa=e;
+  mina=d;
+}
+else 
+{
+maxa=d;
+mina=e;
+}
+  for(let i=0;i<maxa.length;i++)
+  {
+    for(let j=0;j<mina.length;j++)
+    {
+      if(maxa[i]==mina[j])
+      {
+        t=t+2;
+        mina.shift();
+          break;
+      }
+    }
+    
+  }
+  let arr1=[];
+  let sum=(a.length+b.length)-t
+  console.log(sum)
+  let r=sum%6,l=6,z=0,y=0,v=1,x=sum;
+  while(v>0)
+  { 
+    y=r%l
+    if(arr.length==1)
+    { 
+      
+      c.innerHTML=arr.join("")
+      res.innerHTML="The relationship between "+a+" and "+b+" is "+arr.join("")
+      break;
+    } 
+  arr1=arr.slice();
+  console.log(arr1)
+   let f=arr.splice(y-1,1).join("")
+   console.log(arr1.indexOf(f))
+    r=x-(l-(arr1.indexOf(f)+1));
+     l--;
+  }
+ 
+}
+  
+            
+        
+    </script>
+</body>
+</html>
